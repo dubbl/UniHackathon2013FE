@@ -10,6 +10,8 @@ $config['db_name'] = ''; // Database name
 $config['db_username'] = ''; // Database username
 $config['db_password'] = ''; // Database password
 
+$config['REST_SRV'] = 'http://hackatonserverside.apphb.com/api/';
+
 $config['fb_app_id'] = '';
 $config['fb_app_secret'] = '';
 

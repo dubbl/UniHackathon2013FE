@@ -7,10 +7,11 @@
 
     <div id="menu">
         <div class="pure-menu pure-menu-open">
-            <a class="pure-menu-heading" href="<?php echo BASE_URL; ?>">Campify</a>
+            <a class="pure-menu-heading" href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>static/img/studyspots.png" style="height:75px;width:150px;margin:-10px 0px -15px -5px;"/></a>
+
 
             <ul>
-                <li><a href="<?php echo BASE_URL; ?>wtf">WTF is this?</a></li>
+                <li><a href="<?php echo BASE_URL; ?>">Home</a></li>
 
                 <li class="pure-menu-selected menu-item-divided">
                     <a href="http://purecss.io/layouts/">Success stories</a>

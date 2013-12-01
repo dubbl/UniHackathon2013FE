@@ -76,6 +76,7 @@ the menu have 100% height and be fixed on the page as the rest of it scrolls.
     z-index: 1; /* so the menu or its navicon stays above all content */
     background: #191818;
     overflow-y: auto;
+    overflow-x: hidden;
     -webkit-overflow-scroll: touch; /* for smooth scrolling on mobile */
 }
     /*
