@@ -15,6 +15,13 @@ class Profile extends Controller {
 						
 			if ($pageContent != 'null') {
 			
+				$pageContent = file_get_contents($config['REST_SRV'].'badges/'.$profile_id);
+				
+				$badges = array();
+				if ($pageContent != 'null') {
+					$badges = json_decode($pageContent);
+				}
+			
 				$pageContent = file_get_contents('http://graph.facebook.com/'.$profile_id);
 				$parsed_json  = json_decode($pageContent);
 				$profile_name = $parsed_json->name;
@@ -24,6 +31,8 @@ class Profile extends Controller {
 				$template->set('user_id',$user->user_id);
 				$template->set('profile_name',$profile_name);
 				$template->set('profile_id',$profile_id);
+				$template->set('badges',$badges);
+				
 				$template->render();
 			} else {
 				$this->redirect('error');

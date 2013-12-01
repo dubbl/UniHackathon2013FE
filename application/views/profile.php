@@ -10,9 +10,17 @@
 
 		<div class="content">
 		<h2 class="content-subhead">Badges</h2>
-			<p>
-				Here we would like to show your badges. <b>IF YOU HAD ANY! GOTO LECTURES, FOOL!</b>
-			</p>
+			<div class="pure-g-r">
+				<?php foreach ($badges as $badge) { ?>
+					
+					<div class="pure-u-1-3">
+						<img src="<?php echo BASE_URL; ?>static/img/badges/<?php echo $badge->BadgeId; ?>.png" title="<?php echo $badge->BadgeName?>" style="width:150px;height:150px;"/>
+						<h3><?php echo $badge->BadgeName?></h3>
+						<p><?php echo $badge->BadgeDescription?><p>
+					</div>
+					
+				<?php } ?>
+			</div>
 			<div class="pure-g-r grid-example">
 				<div class="pure-u-2-5">
 					<div class="l-box">
